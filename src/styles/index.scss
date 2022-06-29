@@ -1,0 +1,37 @@
+@import "./settings";
+@import "./utils/button";
+@import "./utils/modal";
+@import "./components/nav";
+@import "./components//addContent";
+@import "./components/profil";
+@import "./components/like";
+
+@import "./page/home";
+@import "./components/home/suggestions";
+@import "./components/home/stories";
+@import "./components/home/feed";
+
+@import "./page/message";
+
+@import "./components/inbox/inboxContact";
+@import "./components/inbox/inboxMessage";
+@import "./components/inbox/inboxTitle";
+
+@import "./page/explore";
+@import "./page/fullscreenPicture";
+
+@import "./page/mainProfil";
+
+@import "./page/settingsPage";
+@import "./settings/modifierProfil";
+@import "./settings/changeMDP";
+@import "./settings/webApp";
+@import "./settings/mailNotif";
+@import "./settings/pushNotif";
+@import "./settings/checkContact";
+@import "./settings/supervision";
+@import "./settings/instaEmail";
+@import "./settings/help";
+@import "./settings/security";
+
+@import "./page/notfound";

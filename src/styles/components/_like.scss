@@ -1,0 +1,39 @@
+.like {
+    position: relative;
+    &__content {
+        &.active {
+            display: flex;
+        }
+        display: none;
+        position: absolute;
+        width: 500px;
+        height: 230px;
+        background: white;
+        top: 40px;
+        right: -50px;
+        filter: drop-shadow(2px 2px 4px $cl__black--light);
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &::after {
+            content: "";
+            position: absolute;
+            top: -8px;
+            z-index: -1;
+            right: 53px;
+            border-top: 8px solid white;
+            border-left: 8px solid transparent;
+            border-right: 8px solid transparent;
+            filter: drop-shadow(2px 2px 6px $cl__black--light);
+            transform: rotate(180deg);
+        }
+        p {
+            font-weight: 500;
+            font-size: 0.8rem;
+        }
+    }
+    .like__svg {
+        pointer-events: none;
+    }
+}

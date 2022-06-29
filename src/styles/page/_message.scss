@@ -1,0 +1,29 @@
+.inbox {
+    overflow: hidden;
+    & .sendbox {
+        display: grid;
+        background: white;
+        border-radius: 5px;
+        border: 1px solid $cl__border;
+        height: calc(100vh - 95px);
+        width: calc(100vw - 40px);
+        max-width: 930px;
+        margin: 75px auto 20px;
+        grid-template-columns: 350px 1fr;
+        grid-template-rows: 60px 1fr;
+        overflow: hidden;
+    }
+}
+
+@media screen and (max-width: 935px) {
+    .inbox {
+        background: red;
+        .sendbox {
+            margin-top: 60px;
+            height: calc(100vh - 60px);
+            width: 100%;
+            border: 0;
+            border-radius: 0;
+        }
+    }
+}

@@ -1,0 +1,95 @@
+.settingsPage {
+    margin: 90px auto 20px;
+    width: fit-content;
+    display: flex;
+
+    .left {
+        width: 235px;
+        ul {
+            height: 640px;
+            width: 235px;
+            border: 1px solid $cl__border;
+            li {
+                padding: 0 20px;
+                height: 50px;
+                line-height: 50px;
+                position: relative;
+                font-size: 16px;
+                cursor: pointer;
+                &::after {
+                    content: "";
+                    height: 100%;
+                    width: 1px;
+                    background: $cl__black;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    display: none;
+                }
+                &.active {
+                    font-weight: 600;
+                    &::after {
+                        display: block;
+                    }
+                }
+                &:last-child {
+                    display: flex;
+
+                    align-items: center;
+                    text-align: center;
+                    height: 70px;
+                    line-height: 30px;
+                    font-size: 14px;
+                    font-weight: 600;
+                    color: #0095f6;
+                }
+            }
+        }
+        div {
+            border: 1px solid $cl__border;
+            border-top: 0;
+            height: 220px;
+            padding: 25px;
+            h3 {
+                font-size: 16px;
+                color: #0095f6;
+                font-weight: 600;
+            }
+            p {
+                font-size: 12px;
+                line-height: 16px;
+                font-weight: 400;
+                color: #8e8e8e;
+            }
+        }
+    }
+    .right {
+        width: 690px;
+        border: 1px solid $cl__border;
+        border-left: 0;
+        height: calc(640px + 220px);
+    }
+}
+
+.settings__container {
+    footer {
+        ul {
+            justify-content: center;
+            margin: 0 20px;
+
+            li {
+                margin-right: 10px;
+                cursor: pointer;
+            }
+        }
+        div {
+            display: flex;
+            justify-content: center;
+            height: 60px;
+            p {
+                margin-right: 10px;
+            }
+        }
+        margin-bottom: 40px;
+    }
+}

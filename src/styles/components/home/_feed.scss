@@ -1,0 +1,140 @@
+.feed {
+    border-radius: 7px;
+    border: 1px solid $cl__border;
+    margin-bottom: 15px;
+
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    &__header {
+        display: flex;
+        height: 60px;
+        min-height: 60px;
+        margin: 0;
+        padding: 0;
+        border-bottom: 1px solid $cl__border;
+        align-items: center;
+        justify-content: space-between;
+
+        div {
+            display: flex;
+            padding-left: 15px;
+            font-size: 14px;
+            font-weight: 600;
+            p {
+                margin-left: 15px;
+                line-height: 25px;
+            }
+        }
+        svg {
+            padding-right: 15px;
+            cursor: pointer;
+        }
+    }
+    img {
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+    }
+
+    &__img {
+        img {
+            border-radius: 0;
+            width: 100%;
+            height: auto;
+        }
+    }
+    &__description {
+        height: auto;
+        text-align: left;
+        justify-content: baseline;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+
+        font-size: 14px;
+        p {
+            position: relative;
+            top: 5px;
+            margin-left: 15px;
+            font-weight: 600;
+            span {
+                font-weight: 400;
+            }
+        }
+    }
+    &__comment {
+        min-height: 170px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        text-align: left;
+        p {
+            margin-left: 15px;
+            font-size: 14px;
+            margin-bottom: 10px;
+            &:nth-child(2) {
+                cursor: pointer;
+                font-weight: 600;
+            }
+            &:nth-child(3) {
+                & strong {
+                    cursor: pointer;
+                    font-weight: 600;
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+            &:nth-child(4) {
+                font-weight: 400;
+                font-size: 14px;
+                color: #8e8e8e;
+                cursor: pointer;
+            }
+        }
+        svg {
+            width: 30px;
+            cursor: pointer;
+            margin-right: 15px;
+            &:hover {
+                filter: invert(0.6);
+            }
+        }
+        .icon {
+            display: flex;
+            justify-content: space-between;
+            &__left {
+                padding-left: 15px;
+                display: flex;
+            }
+        }
+    }
+
+    form {
+        display: flex;
+        height: 50px;
+        border-top: 1px solid $cl__border;
+        margin-top: 10px;
+        svg {
+            margin: 0 15px;
+        }
+        input {
+            border: 0;
+            height: 100%;
+            outline: 0;
+            width: 100%;
+        }
+        button {
+            width: 110px;
+            border: 0;
+            font-weight: 600;
+            outline: 0;
+            color: #0095f6;
+            background-color: inherit;
+            cursor: pointer;
+        }
+    }
+}

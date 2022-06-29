@@ -1,0 +1,130 @@
+.nav__header {
+    height: 60px;
+    width: 100%;
+    background-color: white;
+    border-bottom: 1px solid $cl__border;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+
+    .box {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        height: 100%;
+        flex-shrink: 0;
+        form {
+            position: relative;
+            @media screen and (max-width: 650px) {
+                display: none;
+            }
+            svg {
+                width: 20px;
+                position: absolute;
+                top: 8px;
+                left: 15px;
+            }
+            input {
+                border: 0;
+                background: #efefef;
+                height: 35px;
+                width: 270px;
+                border-radius: 5px;
+                padding-left: 45px;
+                outline: none;
+                line-height: 35px;
+            }
+        }
+    }
+    .logo {
+        display: flex;
+        width: 50%;
+        max-width: 333px;
+        &__icon {
+            width: 30px;
+            height: 30px;
+            clip-path: polygon(
+                evenodd,
+                25% 25%,
+                50% 25%,
+                75% 50%,
+                50% 75%,
+                25% 50%,
+                37.5% 37.5%,
+                37.5% 62.5%,
+                62.5% 62.5%,
+                62.5% 37.5%,
+                50% 37.5%,
+                62.5% 50%,
+                50% 62.5%,
+                37.5% 50%,
+                43.75% 43.75%,
+                50% 43.75%,
+                56.25% 50%,
+                50% 56.25%,
+                43.75% 50%,
+                46.88% 46.88%,
+                53.13% 46.88%,
+                53.13% 53.13%,
+                46.88% 53.13%,
+                46.88% 46.88%,
+                50% 43.75%,
+                56.25% 43.75%,
+                56.25% 56.25%,
+                43.75% 56.25%,
+                43.75% 43.75%,
+                50% 37.5%,
+                37.5% 37.5%,
+                50% 25%,
+                75% 25%,
+                75% 75%,
+                25% 75%,
+                0% 50%,
+                50% 0%,
+                100% 50%,
+                50% 100%,
+                25% 75%
+            );
+            background: linear-gradient(45deg, #ffc600, #d300c5);
+        }
+        &__title {
+            height: 36px;
+            align-self: center;
+        }
+    }
+    nav {
+        width: 50%;
+        max-width: 333px;
+
+        ul {
+            display: flex;
+            justify-content: flex-end;
+            .profil__pic {
+                position: relative;
+            }
+
+            li {
+                height: 24px;
+                margin-right: 15px;
+                cursor: pointer;
+
+                img {
+                    height: 100%;
+                    width: 23px;
+                    border-radius: 50%;
+                    &.active {
+                        border: 1px solid black;
+                    }
+                }
+                svg {
+                    height: 100%;
+
+                    &.active {
+                        filter: invert(1);
+                        transform: scale(1.3);
+                    }
+                }
+            }
+        }
+    }
+}

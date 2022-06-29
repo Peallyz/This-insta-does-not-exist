@@ -1,0 +1,22 @@
+.inbox__message {
+    grid-area: 1 / 2 / -1 / -1;
+    border-left: 1px solid $cl__border;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    p {
+        font-size: 14px;
+        color: #8e8e8e;
+        text-align: center;
+    }
+    h4 {
+        font-weight: 300;
+        font-size: 22px;
+        line-height: 40px;
+        margin-top: 10px;
+    }
+    button {
+        min-width: 161px;
+    }
+}

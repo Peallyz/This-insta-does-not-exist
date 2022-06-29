@@ -1,0 +1,63 @@
+.profil__pic {
+    .profil {
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        &.active {
+            display: block;
+        }
+        display: none;
+        position: absolute;
+        height: 200px;
+        width: 230px;
+        background: white;
+        font-weight: 400;
+        font-size: 14px;
+        filter: drop-shadow(1px 1px 4px $cl__black--light);
+        border-radius: 5px;
+        top: 40px;
+        right: -20px;
+        line-height: 40px;
+        &::after {
+            content: "";
+            position: absolute;
+            top: -8px;
+            z-index: -1;
+            right: 23px;
+            border-top: 8px solid white;
+            border-left: 8px solid transparent;
+            border-right: 8px solid transparent;
+            filter: drop-shadow(2px 2px 6px $cl__black--light);
+            transform: rotate(180deg);
+        }
+        ul {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            margin-right: 0 !important;
+
+            li {
+                height: 40px;
+                margin-right: 0;
+                width: 100%;
+                background-color: white;
+                display: flex;
+                svg {
+                    width: 20px;
+                    margin-left: 15px;
+                }
+                span {
+                    margin-left: 15px;
+                    pointer-events: none;
+                }
+                &:last-of-type {
+                    border-top: 1px solid $cl__border;
+                }
+                &:hover {
+                    background: $cl__bg;
+                }
+            }
+        }
+    }
+}

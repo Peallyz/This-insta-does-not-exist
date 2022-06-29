@@ -1,0 +1,21 @@
+.modal {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none;
+    padding: 20px;
+    z-index: 10;
+    &.active {
+        display: block;
+    }
+    &__box {
+        background: white;
+        text-align: center;
+        border-radius: 10px;
+        position: relative;
+        margin: 60px auto 20px;
+    }
+}

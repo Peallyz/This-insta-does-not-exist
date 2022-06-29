@@ -1,0 +1,67 @@
+.mdpChange {
+    .grid {
+        margin-top: 30px;
+        display: grid;
+        grid-template-columns: 190px 500px;
+        grid-template-rows: repeat(autofill);
+        img {
+            width: 30px;
+            border-radius: 50%;
+            grid-area: 1/1/2/2;
+            margin: 0 30px 10px auto;
+            margin-right: 30px;
+        }
+        .currentUserName {
+            grid-area: 1/2/2/3;
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+        label {
+            &.mdp {
+                grid-area: 2/1/3/2;
+            }
+            &.newMdp {
+                grid-area: 3/1/4/2;
+            }
+            &.confirmMDP {
+                grid-area: 4/1/5/2;
+            }
+        }
+
+        input {
+            &.mdp {
+                grid-area: 2/2/3/3;
+            }
+            &.newMdp {
+                grid-area: 3/2/4/3;
+            }
+            &.confirmMDP {
+                grid-area: 4/2/5/3;
+            }
+        }
+        label {
+            text-align: right;
+            font-size: 16px;
+            font-weight: 600;
+            margin: 0 30px;
+        }
+        input {
+            margin-bottom: 20px;
+            margin-right: 65px;
+            padding: 5px;
+            background: $cl__bg;
+            border: 1px solid $cl__border;
+            border-radius: 5px;
+        }
+    }
+    .button__submit {
+        margin-left: 190px;
+        p {
+            margin-top: 30px;
+            color: #0095f6;
+            font-weight: 600;
+            font-size: 14px;
+            cursor: pointer;
+        }
+    }
+}

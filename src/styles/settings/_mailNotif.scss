@@ -1,0 +1,27 @@
+.mailNotif {
+    margin-top: 20px;
+    margin-left: 60px;
+    h3 {
+        font-size: 22px;
+        font-weight: 400;
+        margin-bottom: 30px;
+    }
+    .container {
+        margin-bottom: 25px;
+        .inp {
+            display: flex;
+            p {
+                font-weight: 600;
+                font-size: 14px;
+                color: $cl__black;
+            }
+            input {
+                margin-right: 5px;
+            }
+        }
+        p {
+            font-size: 14px;
+            color: #8e8e8e;
+        }
+    }
+}
