@@ -11,9 +11,4 @@ export default configureStore({
         user: userReducer,
         pic: pictureReducer,
     },
-    middleware: (getDefaultMiddleware) =>
-        getDefaultMiddleware({
-            immutableCheck: false,
-            serializableCheck: false,
-        }),
 });
