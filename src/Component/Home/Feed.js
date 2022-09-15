@@ -24,15 +24,17 @@ const Feed = ({ index, img }) => {
             <div className="feed">
                 <div className="feed__header">
                     <div>
-                        <img
-                            src={currentUser[0].picture.large}
-                            alt={
-                                "photo de " +
-                                currentUser[0].name.first +
-                                " " +
-                                currentUser[0].name.last
-                            }
-                        />
+                        {currentUser[0].picture !== undefined && (
+                            <img
+                                src={currentUser[0].picture.large}
+                                alt={
+                                    "photo de " +
+                                    currentUser[0].name.first +
+                                    " " +
+                                    currentUser[0].name.last
+                                }
+                            />
+                        )}
                         <p>
                             {currentUser[0].name.last.toLowerCase()}
                             {"_"}

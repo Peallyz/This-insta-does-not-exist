@@ -25,26 +25,34 @@ const Home = () => {
         }
         setCard(card + 15);
     }
+    const userData = useSelector((state) => state.user.data);
     const imgs = useSelector((state) => state.pic.img);
     return (
         <div className="home">
-            <div className="home__left">
-                <Stories />
-                {imgs.slice(0, card).map((img, index) => (
-                    <Feed
-                        index={index}
-                        img={img}
-                        key={Math.floor(
-                            Math.random() * 789120456 * Math.random() * 99999
-                        )}
-                    />
-                ))}
-            </div>
-            <div className="home__right">
-                <div className="fixed">
-                    <Suggestion />
-                </div>
-            </div>
+            {userData && (
+                <>
+                    <div className="home__left">
+                        <Stories />
+                        {imgs.slice(0, card).map((img, index) => (
+                            <Feed
+                                index={index}
+                                img={img}
+                                key={Math.floor(
+                                    Math.random() *
+                                        789120456 *
+                                        Math.random() *
+                                        99999
+                                )}
+                            />
+                        ))}
+                    </div>
+                    <div className="home__right">
+                        <div className="fixed">
+                            <Suggestion />
+                        </div>
+                    </div>
+                </>
+            )}
         </div>
     );
 };

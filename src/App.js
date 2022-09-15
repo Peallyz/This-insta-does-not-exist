@@ -98,28 +98,47 @@ function App() {
             dispatch(setImgData(imgArray));
         }, 1000);
 
-        for (let i = 0; i < 200; i++) {
-            time.push({ id: i, online: Math.floor(Math.random() * 10080) });
+        if (userData) {
+            for (let i = 0; i < 200; i++) {
+                time.push({ id: i, online: Math.floor(Math.random() * 10080) });
 
-            objToUpdate = userData.filter(
-                (el) => userData.findIndex((arr) => arr === el) === time[i].id
-            );
+                objToUpdate = userData.filter(
+                    (el) =>
+                        userData.findIndex((arr) => arr === el) === time[i].id
+                );
 
-            updatedObj = addValueInObject(
-                objToUpdate[0],
-                "online",
-                time[i].online
-            );
+                updatedObj = addValueInObject(
+                    objToUpdate[0],
+                    "online",
+                    time[i].online
+                );
 
-            updatedArr.push(updatedObj);
+                updatedArr.push(updatedObj);
+            }
         }
         dispatch(setDataUpdate(updatedArr));
     }, 1000);
 
     useEffect(() => {
         axios
-            .get("https://randomuser.me/api/?results=200&exc=login&nat=fr")
-            .then((res) => dispatch(setInitData(res.data.results)));
+            .get("https://randomuser.me/api/?results=200&exc=login")
+            .then((res) => {
+                if (res) {
+                    dispatch(setInitData(res.data.results));
+                }
+            })
+            .catch((error) => {
+                alert(
+                    error +
+                        " RandomUser API n'a pas pu charger correctement" +
+                        " Veuillez ressayer plus tard"
+                );
+            });
+
+        // fetch("https://randomuser.me/api/?results=200&exc=login")
+        //     .then((res) => res.json())
+        //     .then((res) => dispatch(setInitData(res.data.results)))
+        //     .catch((error) => alert("Erreur : " + error));
 
         axios
             .get("https://api.imgflip.com/get_memes")

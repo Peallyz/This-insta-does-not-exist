@@ -6,6 +6,7 @@ import { setCurrentPage, setPreviousPage } from "../features/page.slice";
 const Explore = () => {
     const dispatch = useDispatch;
     const currentPage = useSelector((state) => state.page.current);
+
     const imgArray = useSelector((state) => state.pic.img);
 
     currentPage !== 6 &&

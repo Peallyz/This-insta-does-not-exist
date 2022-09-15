@@ -5,6 +5,7 @@ import { useSelector } from "react-redux";
 const ExplorePicture = ({ index, img }) => {
     const like = useSelector((state) => state.pic.like);
     const comment = useSelector((state) => state.pic.comment);
+    const userData = useSelector((state) => state.user.data);
 
     const currentLike = like.filter(
         (users) => like.findIndex((data) => data === users) === index
@@ -16,7 +17,7 @@ const ExplorePicture = ({ index, img }) => {
     return (
         <Link
             key={Math.floor(Math.random() * 99999 * index)}
-            to={`/p/${index}`}
+            to={userData ? `/p/${index}` : `/explore`}
             state={{
                 img,
                 index,
